@@ -48,15 +48,11 @@
                         <td><?php echo $quantity; ?></td>
                         <td><?php echo $total; ?></td>
                         <td>
-                            <!-- Edit button to invoke modal for changing quantity -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $id; ?>">
-                                Edit
-                            </button>
+                            <form method="POST" action="../includes/cancel_order.php">
+                                <input type="hidden" name="orderId" value="<?php echo $id; ?>">
+                                <button type="submit" class="btn btn-danger" name="cancelOrder">Cancel</button>
+                            </form>
 
-                            <!-- Delete button to remove the order -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $id; ?>">
-                                Cancel
-                            </button>
                         </td>
                     </tr>
                 <?php } ?>
@@ -70,7 +66,8 @@
     <!-- Include the footer -->
     <?php include '../includes/footer.php'; ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

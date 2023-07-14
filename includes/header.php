@@ -81,12 +81,10 @@
 <!-- JavaScript to trigger the login modal -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // Get a reference to the login link element
-    var loginLink = document.getElementById('loginLink');
+    let loginLink = document.getElementById('loginLink');
 
-    // Add an event listener to the login link
     loginLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default link behavior
+        event.preventDefault();
         $('#loginModal').modal('show'); // Show the login modal using jQuery
     });
 </script>

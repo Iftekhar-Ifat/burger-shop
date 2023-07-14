@@ -19,7 +19,7 @@
         <div class="row">
             <h1><?php echo $_SESSION['username'] ?></h1>
             <div class="col-md-6">
-                <img src="../asset/profile_hero.jpg" alt="Register Image" class="img-fluid">
+                <img src="../asset/profile_hero.jpg" class="img-fluid rounded shadow" alt="Register Image" class="img-fluid">
             </div>
 
             <div class="col-md-6">

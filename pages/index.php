@@ -15,13 +15,23 @@
     <?php include '../includes/header.php'; ?>
 
     <!-- Main content of the landing page -->
-    <section class="hero bg-light text-center">
-        <div class="container hero-content">
-            <h1 class="display-3">Welcome to Burger Shop</h1>
-            <p class="lead">The best place to buy fresh, delicious burgers online.</p>
-            <a href="products.php" class="btn btn-primary btn-lg">Shop Now</a>
+    <!-- Main Body Section -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Welcome to Burger Shop</h2>
+                    <p class="lead">Indulge in the finest burgers in town.</p>
+                    <p>Our burgers are made with premium ingredients, cooked to perfection, and served with a side of crispy fries. Whether you're craving a classic cheeseburger or want to try our signature specialty burgers, we've got something for everyone.</p>
+                    <a href="../pages/products.php" class="btn btn-primary mt-4">View Menu</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="../asset/heroimage.jpg" alt="Burger Shop" class="img-fluid rounded shadow">
+                </div>
+            </div>
         </div>
-    </section>
+    </main>
+
 
     <!-- Include the footer -->
     <?php include '../includes/footer.php'; ?>
