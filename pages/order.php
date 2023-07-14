@@ -29,8 +29,8 @@
             </thead>
             <tbody>
                 <?php
-                // Fetch the order items from the database
-                $selectQuery = "SELECT * FROM orders";
+                $userEmail = $_SESSION['email'];
+                $selectQuery = "SELECT * FROM orders WHERE user_email='$userEmail'";
                 $result = mysqli_query($connection, $selectQuery);
                 $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

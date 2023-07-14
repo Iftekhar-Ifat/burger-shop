@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2023 at 03:33 PM
+-- Generation Time: Jul 14, 2023 at 04:15 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -69,9 +69,12 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `user_email`, `burger_name`, `burger_price`, `quantity`) VALUES
-('Beef burger64aea5cb623fc', 'cse_2012020302@lus.ac.bd', 'Beef burger', 399, 1),
-('Egg Burger64aea5caa84a2', 'cse_2012020302@lus.ac.bd', 'Egg Burger', 249, 1),
-('Vegetable Burger64aea5c94d123', 'cse_2012020302@lus.ac.bd', 'Vegetable Burger', 399, 1);
+('Beef burger64b124f87b56f', 'cse_2012020302@lus.ac.bd', 'Beef burger', 399, 1),
+('Double cheeseburger64b12adcc7a28', 'cse_2012020302@lus.ac.bd', 'Double cheeseburger', 499, 1),
+('Egg Burger64b124f7a7aa7', 'cse_2012020302@lus.ac.bd', 'Egg Burger', 249, 1),
+('Egg Burger64b1579f8ed7f', 'cse_2012020100@lus.ac.bd', 'Egg Burger', 249, 1),
+('Vegetable Burger64b124f6c0e45', 'cse_2012020302@lus.ac.bd', 'Vegetable Burger', 399, 1),
+('Vegetable Burger64b1579ed7209', 'cse_2012020100@lus.ac.bd', 'Vegetable Burger', 399, 1);
 
 -- --------------------------------------------------------
 
@@ -83,17 +86,17 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mobile` varchar(255) NOT NULL
+  `mobile` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`username`, `password`, `email`, `mobile`) VALUES
-('Iftekhar', 'ifat123', 'cse_2012020300@lus.ac.bd', '01782565398'),
-('Iftekhar', 'ifat1234', 'cse_2012020302@lus.ac.bd', '01782565398'),
-('Iftekhar', 'ifat1234', 'cse_2012020310@lus.ac.bd', '01782565398');
+INSERT INTO `users` (`username`, `password`, `email`, `mobile`, `role`) VALUES
+('Iftekhar Admin', 'ifat1234', 'cse_2012020100@lus.ac.bd', '01782565398', 'seller'),
+('Iftekhar Updated', 'ifat1234', 'cse_2012020302@lus.ac.bd', '01782565398', 'buyer');
 
 --
 -- Indexes for dumped tables
