@@ -6,10 +6,12 @@ $r_con_pass = $_POST["r_con_pass"];
 $r_email = $_POST["r_email"];
 $r_mobile = $_POST["r_mobile"];
 
+$role = "buyer";
+
 $_mobile_pattern = "/(\+88)?-?01[3-9]\d{8}/";
 $_email_pattern = "/(cse|eee)_\d{10}@lus\.ac\.bd/";
 
-$insert_query = "INSERT INTO `users`(`username`, `password`, `email`, `mobile`) VALUES ('$r_username','$r_pass','$r_email','$r_mobile')";
+$insert_query = "INSERT INTO `users`(`username`, `password`, `email`, `mobile`, `role`) VALUES ('$r_username','$r_pass','$r_email','$r_mobile', '$role')";
 $get_user_email = "SELECT * FROM `users` WHERE email='$r_email'";
 $email_exists = mysqli_query($connection, $get_user_email);
 
@@ -38,6 +40,7 @@ if (strlen($r_username) < 3 || strlen($r_username) > 20) {
         $_SESSION['username'] = $r_username;
         $_SESSION['email'] = $r_email;
         $_SESSION['mobile'] = $r_mobile;
+        $_SESSION['role'] = $role;
 
         echo "<script>alert('Successfully Registered ✔')</script>";
         echo "<script>location.href='../pages/index.php'</script>";

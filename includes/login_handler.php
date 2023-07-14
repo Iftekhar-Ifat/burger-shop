@@ -16,11 +16,13 @@ if ($result) {
         $username = $row['username'];
         $email = $row['email'];
         $mobile = $row['mobile'];
+        $role = $row['role'];
 
         session_start();
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;
         $_SESSION['mobile'] = $mobile;
+        $_SESSION['role'] = $role;
 
         echo "<script>location.href='../pages/index.php'</script>";
     } else {
