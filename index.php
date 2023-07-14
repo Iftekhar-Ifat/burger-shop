@@ -12,9 +12,8 @@
 
 <body>
     <!-- Include the header -->
-    <?php include '../includes/header.php'; ?>
+    <?php include './includes/header.php'; ?>
 
-    <!-- Main content of the landing page -->
     <!-- Main Body Section -->
     <main class="py-5">
         <div class="container">
@@ -23,7 +22,7 @@
                     <h2 class="mb-4">Welcome to Burger Shop</h2>
                     <p class="lead">Indulge in the finest burgers in town.</p>
                     <p>Our burgers are made with premium ingredients, cooked to perfection, and served with a side of crispy fries. Whether you're craving a classic cheeseburger or want to try our signature specialty burgers, we've got something for everyone.</p>
-                    <a href="../pages/products.php" class="btn btn-primary mt-4">View Menu</a>
+                    <a href="/products.php" class="btn btn-primary mt-4">View Menu</a>
                 </div>
                 <div class="col-md-6">
                     <img src="../asset/heroimage.jpg" alt="Burger Shop" class="img-fluid rounded shadow">
@@ -34,7 +33,7 @@
 
 
     <!-- Include the footer -->
-    <?php include '../includes/footer.php'; ?>
+    <?php include './includes/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <!-- <script src="js/script.js"></script> -->

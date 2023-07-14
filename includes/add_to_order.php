@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($connection, $insertQuery)) {
         echo "Burger added to the order successfully!";
-        echo "<script>location.href='../pages/products.php'</script>";
+        echo "<script>location.href='../products.php'</script>";
     } else {
         echo "Error adding burger to the order: " . mysqli_error($connection);
     }

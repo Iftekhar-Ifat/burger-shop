@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $insertQuery = "INSERT INTO burgers (name, description, price, image) VALUES ('$burgerName', '$burgerDescription', '$burgerPrice', '$filePath')";
                 if (mysqli_query($connection, $insertQuery)) {
                     echo "Burger added successfully!";
-                    echo "<script>location.href='../pages/profile.php'</script>";
+                    echo "<script>location.href='../profile.php'</script>";
                 } else {
                     echo "Error adding burger: " . mysqli_error($connection);
                 }

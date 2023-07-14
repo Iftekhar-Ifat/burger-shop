@@ -11,7 +11,7 @@
 
 <body>
     <!-- Include the header -->
-    <?php include '../includes/header.php'; ?>
+    <?php include './includes/header.php'; ?>
 
     <!-- Main content of the order page -->
     <section class="container my-5">
@@ -48,7 +48,7 @@
                         <td><?php echo $quantity; ?></td>
                         <td><?php echo $total; ?></td>
                         <td>
-                            <form method="POST" action="../includes/cancel_order.php">
+                            <form method="POST" action="./includes/cancel_order.php">
                                 <input type="hidden" name="orderId" value="<?php echo $id; ?>">
                                 <button type="submit" class="btn btn-danger" name="cancelOrder">Cancel</button>
                             </form>
@@ -64,7 +64,7 @@
     </section>
 
     <!-- Include the footer -->
-    <?php include '../includes/footer.php'; ?>
+    <?php include './includes/footer.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -24,10 +24,10 @@ if ($result) {
         $_SESSION['mobile'] = $mobile;
         $_SESSION['role'] = $role;
 
-        echo "<script>location.href='../pages/index.php'</script>";
+        echo "<script>location.href='../index.php'</script>";
     } else {
         echo "<script>alert('User not found!')</script>";
-        echo "<script>location.href='../pages/index.php'</script>";
+        echo "<script>location.href='../index.php'</script>";
     }
 } else {
     // Query execution failed

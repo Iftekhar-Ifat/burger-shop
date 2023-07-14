@@ -10,17 +10,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/about.php">About</a>
+                        <a class="nav-link" href="../about.php">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/products.php">Products</a>
+                        <a class="nav-link" href="../products.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/contact.php">Contact</a>
+                        <a class="nav-link" href="../contact.php">Contact</a>
                     </li>
                     <?php if (isset($_SESSION['username'])) : ?>
-                        <a href="../pages/profile.php">
+                        <a href="../profile.php">
                             <li class="nav-item">
                                 <div class="nav-link avatar">
                                     <img src="../asset/avatar.png" alt="User Avatar" class="avatar-img" style="width: 30px; height: 30px;">
@@ -29,10 +29,10 @@
                             </li>
                         </a>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/order.php">My orders</a>
+                            <a class="nav-link" href="../order.php">My orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../includes/logout.php">Logout</a>
+                            <a class="nav-link" href="./includes/logout.php">Logout</a>
                         </li>
 
                     <?php else : ?>
@@ -50,7 +50,7 @@
 </header>
 
 
-<?php include("../config.php") ?>
+<?php include("./config.php") ?>
 
 
 <!-- Login Modal -->
@@ -62,7 +62,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="../includes/login_handler.php" method="post">
+                <form action="./includes/login_handler.php" method="post">
                     <div class="mb-3">
                         <label for="loginEmail" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="loginEmail" name="l_email" required>

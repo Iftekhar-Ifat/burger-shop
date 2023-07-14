@@ -18,23 +18,23 @@ $email_exists = mysqli_query($connection, $get_user_email);
 
 if (strlen($r_username) < 3 || strlen($r_username) > 20) {
     echo "<script>alert('User Name should be 3-20 char!!!!')</script>";
-    echo "<script>location.href='../pages/register.php'</script>";
+    echo "<script>location.href='../register.php'</script>";
 } else if (!preg_match($_email_pattern, $r_email)) {
     echo "<script>alert('Invalid Email!!')</script>";
-    echo "<script>location.href='../pages/register.php'</script>";
+    echo "<script>location.href='../register.php'</script>";
 } else if (!preg_match($_mobile_pattern, $r_mobile)) {
     echo "<script>alert('Invalid Mobile Number!!')</script>";
-    echo "<script>location.href='../pages/register.php'</script>";
+    echo "<script>location.href='../register.php'</script>";
 } else if ($r_pass !== $r_con_pass) {
     echo "<script>alert('Pass and con-pass is not matching!!')</script>";
-    echo "<script>location.href='../pages/register.php'</script>";
+    echo "<script>location.href='../register.php'</script>";
 } else if (mysqli_num_rows($email_exists) > 0) {
     echo "<script>alert('Email already exists!!')</script>";
-    echo "<script>location.href='../pages/register.php'</script>";
+    echo "<script>location.href='../register.php'</script>";
 } else {
     if (!mysqli_query($connection, $insert_query)) {
         die("Something went wrong ❗");
-        echo "<script>location.href='../pages/register.php'</script>";
+        echo "<script>location.href='../register.php'</script>";
     } else {
         session_start();
         $_SESSION['username'] = $r_username;
@@ -43,7 +43,7 @@ if (strlen($r_username) < 3 || strlen($r_username) > 20) {
         $_SESSION['role'] = $role;
 
         echo "<script>alert('Successfully Registered ✔')</script>";
-        echo "<script>location.href='../pages/index.php'</script>";
+        echo "<script>location.href='../index.php'</script>";
     }
 }
 

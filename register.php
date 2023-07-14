@@ -15,7 +15,7 @@ include('../config.php');
 
 <body>
     <!-- Include the header -->
-    <?php include '../includes/header.php'; ?>
+    <?php include './includes/header.php'; ?>
 
     <!-- Main content of the register page -->
     <section class="container my-5">
@@ -25,7 +25,7 @@ include('../config.php');
             </div>
             <div class="col-md-6">
                 <h1>Register</h1>
-                <form action="../includes/register_handler.php" method="post">
+                <form action="./includes/register_handler.php" method="post">
                     <div class="mb-3">
                         Username :
                         <input type="text" class="form-control" name="r_username">
@@ -54,7 +54,7 @@ include('../config.php');
     </section>
 
     <!-- Include the footer -->
-    <?php include '../includes/footer.php'; ?>
+    <?php include './includes/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <!-- <script src="js/script.js"></script> -->

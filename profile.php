@@ -11,7 +11,7 @@
 
 <body>
     <!-- Include the header -->
-    <?php include('../includes/header.php'); ?>
+    <?php include('./includes/header.php'); ?>
 
     <!-- Main content of the profile page -->
     <section class="container my-5">
@@ -24,7 +24,7 @@
 
             <?php if ($_SESSION['role'] == 'seller') : ?>
                 <div class="col-md-6">
-                    <form method="POST" action="../includes/add_burger.php" enctype="multipart/form-data">
+                    <form method="POST" action="./includes/add_burger.php" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="burgerName" class="form-label">Burger Name</label>
                             <input type="text" class="form-control" id="burgerName" name="burgerName" required>
@@ -59,7 +59,7 @@
                 </script>
             <?php else : ?>
                 <div class="col-md-6">
-                    <form action="../includes/update_profile.php" method="post">
+                    <form action="./includes/update_profile.php" method="post">
                         <div class="mb-3">
                             Username :
                             <input type="text" class="form-control" name="r_username" placeholder="<?php echo $_SESSION['username'] ?>" required>
@@ -81,7 +81,7 @@
     </section>
 
     <!-- Include the footer -->
-    <?php include('../includes/footer.php'); ?>
+    <?php include('./includes/footer.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
